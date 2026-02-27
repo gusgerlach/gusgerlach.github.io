@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Name</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: #fff;
+      color: #1a1a1a;
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* ── HEADER ── */
+    header {
+      padding: 5rem 0 3rem;
+      animation: fadeIn 0.5s ease both;
+    }
+
+    h1 {
+      font-family: 'Lora', serif;
+      font-size: 2.4rem;
+      font-weight: 400;
+      line-height: 1.15;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.01em;
+    }
+
+    .tagline {
+      font-size: 0.9rem;
+      color: #888;
+      margin-bottom: 2rem;
+    }
+
+    nav {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      font-size: 0.8rem;
+      color: #888;
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    nav a:hover { color: #1a1a1a; }
+
+    /* ── DIVIDER ── */
+    hr {
+      border: none;
+      border-top: 1px solid #e8e8e8;
+      margin: 0;
+    }
+
+    /* ── SECTIONS ── */
+    section {
+      padding: 3rem 0;
+      border-top: 1px solid #e8e8e8;
+      animation: fadeIn 0.5s ease both;
+    }
+
+    section:nth-of-type(1) { animation-delay: 0.05s; }
+    section:nth-of-type(2) { animation-delay: 0.1s; }
+    section:nth-of-type(3) { animation-delay: 0.15s; }
+
+    h2 {
+      font-family: 'Lora', serif;
+      font-size: 1.1rem;
+      font-weight: 400;
+      margin-bottom: 1.25rem;
+      color: #1a1a1a;
+    }
+
+    p {
+      color: #555;
+      font-size: 0.9rem;
+      line-height: 1.75;
+    }
+
+    /* ── CV / CONTACT ── */
+    .contact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .contact-row {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .contact-label {
+      font-size: 0.72rem;
+      color: #bbb;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      width: 70px;
+      flex-shrink: 0;
+    }
+
+    .contact-row a {
+      font-size: 0.88rem;
+      color: #1a1a1a;
+      text-decoration: none;
+      border-bottom: 1px solid #e0e0e0;
+      transition: border-color 0.15s;
+    }
+
+    .contact-row a:hover { border-color: #1a1a1a; }
+
+    /* ── PUBLICATIONS ── */
+    .pub {
+      padding: 1.25rem 0;
+      border-top: 1px solid #f0f0f0;
+    }
+
+    .pub:first-child { border-top: none; padding-top: 0; }
+
+    .pub-meta {
+      font-size: 0.72rem;
+      color: #bbb;
+      margin-bottom: 0.3rem;
+    }
+
+    .pub-title {
+      font-size: 0.92rem;
+      font-weight: 500;
+      color: #1a1a1a;
+      margin-bottom: 0.2rem;
+      line-height: 1.4;
+    }
+
+    .pub-authors {
+      font-size: 0.82rem;
+      color: #888;
+      margin-bottom: 0.55rem;
+    }
+
+    .pub-authors strong { color: #555; font-weight: 500; }
+
+    .pub-links {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .pub-links a {
+      font-size: 0.75rem;
+      color: #888;
+      text-decoration: none;
+      border-bottom: 1px solid #ddd;
+      transition: color 0.15s, border-color 0.15s;
+    }
+
+    .pub-links a:hover { color: #1a1a1a; border-color: #1a1a1a; }
+
+    /* ── FOOTER ── */
+    footer {
+      padding: 2rem 0 3rem;
+      border-top: 1px solid #e8e8e8;
+    }
+
+    footer p {
+      font-size: 0.75rem;
+      color: #ccc;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(12px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 500px) {
+      h1 { font-size: 1.9rem; }
+      .container { padding: 0 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- HEADER -->
+  <header>
+    <!-- ✏️ Your name -->
+    <h1>Your Name</h1>
+    <!-- ✏️ Your role and institution -->
+    <p class="tagline">PhD Candidate · Department of X · University of Y</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#cv">CV</a>
+      <a href="#publications">Publications</a>
+    </nav>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>About</h2>
+    <!-- ✏️ Your bio -->
+    <p>
+      I am a researcher working at the intersection of [field A] and [field B].
+      My work focuses on [main research interest], with the goal of [broader impact].
+      I am advised by [Advisor Name] at [Institution] and am part of [Lab / Group].
+    </p>
+  </section>
+
+  <!-- CV & CONTACT -->
+  <section id="cv">
+    <h2>CV &amp; Contact</h2>
+    <div class="contact-list">
+      <!-- ✏️ cv.pdf → your CV filename -->
+      <div class="contact-row">
+        <span class="contact-label">CV</span>
+        <a href="cv.pdf" download>Download PDF</a>
+      </div>
+      <!-- ✏️ Replace with your LinkedIn URL -->
+      <div class="contact-row">
+        <span class="contact-label">LinkedIn</span>
+        <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener">linkedin.com/in/yourprofile</a>
+      </div>
+      <!-- ✏️ Replace with your email -->
+      <div class="contact-row">
+        <span class="contact-label">Email</span>
+        <a href="mailto:you@university.edu">you@university.edu</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PUBLICATIONS -->
+  <section id="publications">
+    <h2>Publications</h2>
+
+    <!-- ✏️ PUB 1 — your hosted paper -->
+    <div class="pub">
+      <!-- ✏️ Year and venue -->
+      <p class="pub-meta">2024 · Conference / Journal Name</p>
+      <!-- ✏️ Paper title -->
+      <p class="pub-title">Your Paper Title Goes Here</p>
+      <!-- ✏️ Authors — bold your name with <strong> -->
+      <p class="pub-authors">Author One, <strong>Your Name</strong>, Author Three</p>
+      <div class="pub-links">
+        <!-- ✏️ Replace paper.pdf with your uploaded filename -->
+        <a href="paper.pdf" target="_blank">PDF</a>
+        <a href="https://arxiv.org/abs/XXXXXX" target="_blank" rel="noopener">arXiv</a>
+        <a href="https://doi.org/XXXXXX" target="_blank" rel="noopener">DOI</a>
+      </div>
+    </div>
+
+    <!-- ✏️ PUB 2 -->
+    <div class="pub">
+      <p class="pub-meta">2023 · Conference / Journal Name</p>
+      <p class="pub-title">Second Paper Title</p>
+      <p class="pub-authors">Author One, <strong>Your Name</strong></p>
+      <div class="pub-links">
+        <a href="https://arxiv.org/abs/XXXXXX" target="_blank" rel="noopener">arXiv</a>
+        <a href="https://doi.org/XXXXXX" target="_blank" rel="noopener">DOI</a>
+      </div>
+    </div>
+
+    <!-- ✏️ PUB 3 -->
+    <div class="pub">
+      <p class="pub-meta">2022 · Conference / Journal Name</p>
+      <p class="pub-title">Earlier Work or Preprint Title</p>
+      <p class="pub-authors"><strong>Your Name</strong>, Author Two</p>
+      <div class="pub-links">
+        <a href="https://arxiv.org/abs/XXXXXX" target="_blank" rel="noopener">arXiv</a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <!-- ✏️ Your name -->
+    <p>© 2024 Your Name · Hosted on GitHub Pages</p>
+  </footer>
+
+</div>
+</body>
+</html>
